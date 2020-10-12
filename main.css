@@ -37,12 +37,9 @@ body{
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem 4rem 1rem 4rem;
-}
-
-#container{
-overflow-y: scroll;
-scrollbar-width: none; /* Firefox */
--ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
 #container::-webkit-scrollbar { /* WebKit - Chrome & Others */
@@ -67,13 +64,13 @@ main{
 }
 
 #container-image img{
-  width: 100%;
+  width: 90%;
 }
 
 #container-presentation{
   flex: 1 0 46%;
   color: white;
-  padding: 2rem 1rem 0 3rem;
+  padding: 2rem 1rem 0 2rem;
 }
 
 #container-presentation h2{
@@ -130,23 +127,53 @@ footer{
   margin: 0.2rem;
 }
 
+.icon:active{
+  transform:rotate3d(0, 1, 0, 50deg);
+}
+
+.icon:hover{
+  color:black;
+  background-color: white;
+}
+
 .icon i{
   font-size: 0.6em;
 }
 
 @media only screen and (max-width:848px) {
+
+  #container{
+    height: unset;
+    background-image: url("./images/bg-mobile.svg");
+    background-size: initial;
+    padding: 1.5rem;
+  }
+
   main{
     padding-bottom: 2rem;
   }
 
-  header{
-    align-self: center;
+  #container-image{
+    align-content: center;
+  }
+
+  #container-image img {
+    width: 100%;
   }
 
   #container-presentation{
     align-self: center;
     text-align: center;
     padding: 2rem 0 0 0;
+
+  }
+
+  #container-presentation h2{
+    font-size: 1.2rem;
+  }
+  
+  #container-presentation p{
+    font-size: 0.85rem;
   }
 
   footer{
